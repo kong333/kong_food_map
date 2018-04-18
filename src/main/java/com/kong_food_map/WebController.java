@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.kong_food_map.domain.Member;
 import com.kong_food_map.repository.MemberRepository;
-
+/**
+ 
 @Controller
 //@RequestMapping("/member")
 public class WebController {
@@ -67,3 +68,4 @@ public class WebController {
 		return "hello";
 	}
 }
+ */

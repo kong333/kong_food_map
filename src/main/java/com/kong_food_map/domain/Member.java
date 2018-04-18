@@ -1,5 +1,6 @@
 package com.kong_food_map.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,7 +19,7 @@ public class Member {
 	String email;
 	String password;
 	
-	@ColumnDefault("'N'")
+	@Column(name = "del_yn", nullable = false, columnDefinition = "Char(1) default N")
 	String del_yn;
 
 }
