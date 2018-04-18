@@ -7,17 +7,13 @@
         <!-- Templates -->
 
         <definition name="layout.basic" template="/WEB-INF/tiles/layout/basic.jsp">
-            <put-attribute name="header" value="/WEB-INF/views/header/header.jsp" />
+            <put-attribute name="header" value="/WEB-INF/views/header.jsp" />
             <put-attribute name="body" value="" />
         </definition>
 
         <!-- Pages -->
-	    <definition name="kongfood/*" extends="default">
-	        <put-attribute name="body" value="/WEB-INF/views/kongfood/{1}.jsp" />
-	    </definition>
-	
-	    <definition name="*/*/*" extends="default">
-	        <put-attribute name="body" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+	    <definition name="*/*" extends="layout.basic">
+	        <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
 	    </definition>  
         
     </tiles-definitions>
